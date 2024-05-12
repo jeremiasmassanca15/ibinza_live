@@ -12,7 +12,7 @@
 /* font-family: -apple-system, "Helvetica Neue", sans-serif, "Inter", "Helvetica Neue Light"; */
 
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-font-family: 'Poppins', Inter, system-ui, sans-serif;
+/* font-family: 'Poppins', Inter, system-ui, sans-serif; */
 
 
 * {box-sizing: border-box;margin: 0;padding: 0;font-family: 'Montserrat', Inter, system-ui, sans-serif;}html, body {scroll-behavior: smooth;-moz-osx-font-smoothing: grayscale;background:#fff;text-decoration: none;font-size: 1.41em;line-height: 0.857em;color: rgba(0, 0, 0, 0.84);margin: 0;height: 100%;}a {text-decoration: none;color:rgba(0, 0, 0, 0.84);}a:active {color: rgba(0, 0, 0, 0.84);}
