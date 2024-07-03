@@ -1332,7 +1332,27 @@
         }
     </script>
 
-    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll('img.lazyload');
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const lazyImage = entry.target;
+                        lazyImage.src = lazyImage.dataset.src; // This will trigger the load of the image
+                        // lazyImage.style.width = '100%';
+                        lazyImage.onload = () => {
+                            lazyImage.classList.remove('lazyload'); // This will remove the spinner
+                        };
+                        observer.unobserve(lazyImage);
+                    }
+                });
+            });
+            images.forEach((img) => {
+                imageObserver.observe(img);
+            });
+        });
+    </script>
   
     <script defer>
         const showMoreButtons = document.querySelectorAll('.showMoreBtn');
